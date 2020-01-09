@@ -1,0 +1,56 @@
+@font-face {font-family: "iconfont";
+  src: url('../fonts/ali-font/iconfont.eot?t=1575880193353'); /* IE9 */
+  src: url('../fonts/ali-font/iconfont.eot?t=1575880193353#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/ali-font/iconfont.woff?t=1575880193353') format('woff'),
+  url('../fonts/ali-font/iconfont.ttf?t=1575880193353') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('../fonts/ali-font/iconfont.svg?t=1575880193353#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icon:before {
+  content: "\e610";
+}
+
+.icon-liebiao:before {
+  content: "\e614";
+}
+
+.icon-yanjing:before {
+  content: "\e62b";
+}
+
+.icon-guanbi:before {
+  content: "\e620";
+}
+
+.icon-guanbi1:before {
+  content: "\e65c";
+}
+
+.icon-zanting:before {
+  content: "\e76a";
+}
+
+.icon-guanbi2:before {
+  content: "\e711";
+}
+
+.icon-bofang:before {
+  content: "\e63d";
+}
+
+.icon-heart:before {
+  content: "\e85b";
+}
+
+.icon-Aa:before {
+  content: "\e636";
+}
+

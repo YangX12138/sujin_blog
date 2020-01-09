@@ -1,0 +1,39 @@
+.container {
+    position: relative;
+    padding-bottom: 100px;
+
+    &.menu {
+        height: 100vh;
+        padding-bottom: 0;
+        overflow: hidden;
+    }
+
+    &:before {
+       content: '';
+       position: absolute;
+       left: 50%;
+       display: block;
+       width: 1px;
+       height: 100%;
+       background: #eaeaea; 
+        z-index: -1;
+    }
+
+    .more {
+        margin: 70px 0 0;
+        text-align: center;
+
+        a {
+            display: inline-block;
+            padding: 10px 40px;
+            color: #666;
+            border: 1px solid #dadada;
+            background: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 5px;
+            line-height: 1.4;
+        }
+    }
+}
+

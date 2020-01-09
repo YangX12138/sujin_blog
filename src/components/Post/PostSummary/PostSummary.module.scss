@@ -1,0 +1,84 @@
+.post {
+    position: relative;
+    width: 1200px;
+    margin: 100px auto 0;
+
+    &.odd {
+        text-align: right;
+
+        .else {
+            right: 660px;
+        }
+    }
+
+    &.even {
+        .else {
+            left: 660px;
+        }
+    }
+
+    a {
+        position: relative;
+        display: inline-block;
+        width: 680px;
+        height: 440px;
+        z-index: 3;
+        overflow: hidden;
+    }
+}
+
+.else {
+    position: absolute;
+    text-align: left;
+    top: 20px;
+    width: 500px;
+    height: 400px;
+    border: 1px solid #eaeaea;
+    overflow: hidden;
+
+    .date {
+        font-size: 12px;
+        color: #999;
+        margin: 80px 0 0 80px;
+    }
+
+    h3 {
+        font-size: 30px;
+        line-height: 1.1;
+        margin: 10px 100px 0 80px;
+    }
+
+    .title {
+        display: inline;
+    }
+
+    a {
+        text-decoration: none;
+        color: #333;
+    }
+
+    .summary {
+        margin: 10px 100px 0 80px;
+        font-size: 14px;
+        line-height: 1.8;
+        color: #555;
+    }
+
+    .here {
+        position: absolute;
+        bottom: 80px;
+        left: 80px;
+        font-size: 13px;
+
+        li {
+            display: inline-block;
+            color: #999;
+            margin-right: 10px;
+
+            span:first-child {
+                margin-right: 7px;
+            }
+
+        }
+    }
+}

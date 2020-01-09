@@ -1,0 +1,38 @@
+.header {
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    z-index: 999;
+
+    a {
+        display: block;
+        text-decoration: none;
+    }
+
+    .icon_logo {
+        position: absolute;
+        left: 60px;
+        width: 100px;
+        background: red;
+        user-select: none;
+    }
+
+    .icon_menu {
+        position: absolute;
+        right: 60px;
+        padding: 6px;
+        cursor: pointer;
+        user-select: none;
+        background-color: #fff;
+        border-radius: 2px;
+
+        span {
+            font-size: 16px;
+            color: rgb(234, 44, 69);
+        }
+
+        .menu_icon {
+            font-size: 20px;
+        }
+    }
+}
