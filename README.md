@@ -2,7 +2,7 @@
 
 UI部分仿[素锦](https://isujin.com/)
 
-这是我的一个练手项目，写这个博客的原因是因为之前有一天看到[素锦](https://isujin.com/)这个网站感觉界面的风格看起来特别漂亮，所以就决定自己写一个，除了这个外，还写了一个这个网站CMS的后台管理以及用express写了个后端服务器，以下是git地址。
+这是我的一个练手项目，写这个博客的原因是因为之前有一天看到[素锦](https://isujin.com/)这个网站感觉界面的风格看起来特别漂亮，所以就决定自己写一个，除了这个外，还写了这个网站CMS的后台管理以及用express写了个后端服务器，以下是git地址。
 
 ​		cms后台：[https://github.com/YangX12138/sujin_cms](https://github.com/YangX12138/sujin_cms)
 
