@@ -23,7 +23,7 @@ npm run build
 
 ### 截图
 
-![](https://blog20190912.oss-cn-beijing.aliyuncs.com/sujin_blog_zs_01.png)
+![a](https://blog20190912.oss-cn-beijing.aliyuncs.com/sujin_blog_zs_01.png)
 
 
 
