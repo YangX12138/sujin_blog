@@ -7,7 +7,7 @@ UI部分仿[素锦](https://isujin.com/)
 
 ​		cms后台：[https://github.com/YangX12138/sujin_cms](https://github.com/YangX12138/sujin_cms)
 
-​		后端服务器：[https://github.com/YangX12138/myserver](https://github.com/YangX12138/myserver)
+​		后端服务器：[https://github.com/YangX12138/sujin_server](https://github.com/YangX12138/sujin_server)
 
 ### Build Setup
 
