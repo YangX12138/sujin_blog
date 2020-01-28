@@ -1,0 +1,46 @@
+.archive {
+    padding: 50px 0;
+    position: relative;
+    top: 50px;
+}
+
+.content {
+    width: 700px;
+    margin: 0 auto;
+    color: #333;
+    line-height: 2;
+}
+
+.year {
+    font-size: 22px;
+    margin: 10px 0 0;
+}
+
+.mon_list {
+    margin: 10px 0;
+    padding-left: 20px;
+
+    li {
+        list-style: disc;
+        font-weight: normal;
+
+        .mon {
+            font-size: 14px;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        .post_list {
+            font-size: 14px;
+            padding-left: 20px;
+            margin: 10px 0;
+
+            a {
+                color: #333;
+                padding: 0 5px;
+            }
+        }
+    }
+}

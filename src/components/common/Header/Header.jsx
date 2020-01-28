@@ -9,7 +9,6 @@ const Header = ({ toggleMenu, actived }) => {
         <>
             <div className={styles.header}>
                 <Link to="/" className={styles.icon_logo}>
-                    aaa
                 </Link>
                 <div onClick={toggleMenu} className={styles.icon_menu}>
                     {

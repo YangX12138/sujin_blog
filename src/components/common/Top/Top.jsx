@@ -6,6 +6,7 @@ const Top = () => {
     return (
         <div className={styles.top}>
             <Link className={styles.logo_icon} to={'/'}>
+                L
             </Link>
         </div>
     )

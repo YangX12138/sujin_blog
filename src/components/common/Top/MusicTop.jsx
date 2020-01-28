@@ -76,6 +76,7 @@ function MusicTop({ musicSrc, title }){
                 { title }
             </h3>
             <Link className={styles.logo_icon} to={'/'}>
+                L
             </Link>
             <div className={styles.social}>
                 <span className={cs('iconfont', styles.iconfont, styles.like_icon)}>&#xe85b;</span>

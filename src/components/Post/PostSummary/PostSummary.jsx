@@ -38,7 +38,7 @@ const PostSummary = ({ isEven, url, to, data }) => {
                         {data.title}
                     </Link>
                 </h3>
-                <p 
+                <p
                     className={styles.summary}
                 >
                     {data.summary}

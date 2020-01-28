@@ -8,6 +8,7 @@ import cs from 'classnames';
 import { Link } from 'react-router-dom';
 import Footer from '../../components/common/Footer/Footer';
 import articleService from '../../api/article.service';
+import coverServeice from '../../api/cover.service';
 import withAutoToTop from '../../components/hoc/withAutoToTop/withAutoToTop';
 
 let page = 1;
@@ -16,12 +17,46 @@ function Home({ match }) {
     const [isMenu, setMenu] = useState(false);
     const [articles, setArticles] = useState([]);
     const [article, setArticle] = useState({});
+    const [coverBG, setCoverBG]  = useState('');
 
-    if(match) {
+    if (match) {
         page = match.params.page;
-    }else {
+    } else {
         page = 1;
     }
+
+    useEffect(() => {
+        getCover();
+        getArticles();
+        getLatestArticle();
+    }, [match])
+
+    return (
+        <main className={isMenu ? cs(styles.container, styles.menu) : cs(styles.container)}>
+            <Menu actived={isMenu} />
+            <Cover background={coverBG} article={article} />
+            <Header actived={isMenu} toggleMenu={toggleMenu} />
+            <div>
+                {
+                    articles.map((item, index) => (
+                        <PostSummary
+                            key={item._id}
+                            to={`/article/${item._id}`}
+                            url={item.thumb}
+                            isEven={index % 2 === 0}
+                            data={item}
+                        />
+                    ))
+                }
+            </div>
+            <div className={styles.more}>
+                <Link to={`/page/${parseInt(page) + 1}`}>
+                    加载更多
+                </Link>
+            </div>
+            <Footer />
+        </main>
+    )
 
     function toggleMenu() {
         setMenu(!isMenu);
@@ -39,48 +74,11 @@ function Home({ match }) {
         })
     }
 
-    useEffect(() => {
-        getArticles();
-        getLatestArticle();
-    }, [match])
-
-    return (
-        <main 
-            className={isMenu ? cs(styles.container, styles.menu) : cs(styles.container)}
-        >
-            <Menu 
-                actived={isMenu} 
-            />
-            <Cover 
-                article={article}
-            />
-            <Header 
-                actived={isMenu} 
-                toggleMenu={toggleMenu} 
-            />
-            <div>
-                {
-                    articles.map((item, index) => (
-                        <PostSummary 
-                            key={item._id}
-                            to={`/article/${item._id}`} 
-                            url={item.thumb} 
-                            isEven={ index % 2 === 0 }
-                            data={item}
-                        />
-                    ))
-                }
-            </div>
-            <div 
-                className={styles.more}
-            >
-                <Link to={`/page/${parseInt(page) + 1}`}>
-                    加载更多
-                </Link>
-            </div>
-            <Footer />
-        </main>
-    )
+    function getCover() {
+        coverServeice.getCover().then(res => {
+            setCoverBG(res.data.cover.bg_img);
+        })
+    }
 }
 
 export default withAutoToTop(Home);

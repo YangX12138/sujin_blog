@@ -21,10 +21,19 @@ function Article({ match, history }){
         view_count: 0,
         likes_count: 0 ,
         content: '',
-        music: ''
+        music: '',
+        tags: []
     });
+    const [articles, setArticles] = useState([]);
+
     const id = match.params.id;
     const content = data.content;
+
+    function getRelateArticles() {
+        articleService.getRelateArticles().then(res => {
+            setArticles(res.data.articles);
+        })
+    }
 
     function getArticle(_id) {
         articleService.getArticleById(_id).then((res) => {
@@ -55,6 +64,7 @@ function Article({ match, history }){
     useEffect(() => {
         contentRef.current.innerHTML = marked(content);
         getArticle(id);
+        getRelateArticles();
     }, [id, content]);
 
     useEffect(() => {
@@ -62,9 +72,10 @@ function Article({ match, history }){
             el: '#vcomments',
             appId: 'cr4KITm3JbKgl1hlpJLYU5XR-gzGzoHsz',
             appKey: 'R2aKNvFbXQxaDpjvch16DLv2',
-            avatar: 'monsterid'
+            avatar: 'monsterid',
+            path: `${match.url}`
         });
-    }, []);
+    }, [match]);
 
     return (
         <div className={styles.article}>
@@ -122,12 +133,19 @@ function Article({ match, history }){
                         </span>
                     </span>
                 </h3>
-                <RelateSummary
-                    title={'他只是想和你结婚，才不是喜欢你'}
-                    summary={'01 在遇见王先生之前，我差一点就和一个认识不到三个月的海归结婚了。 海归是留英。好像是专科毕业被父母送出去的，在英国洗碗刷盘子，和黑人喝酒打架，搂新加坡美女。一混就是...'}
-                    imgSrc={'https://isujin.com/wp-content/uploads/2016/08/wallhaven-331343-300x188.jpg'}
-                    id={'123'}
-                />
+                {
+                    articles.map(item => {
+                        return (
+                            <RelateSummary
+                                key={item._id}
+                                title={item.title}
+                                summary={item.summary}
+                                imgSrc={item.thumb}
+                                id={item._id}
+                            />
+                        )
+                    })
+                }
             </div>
             <Footer/>
         </div>

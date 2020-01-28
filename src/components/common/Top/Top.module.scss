@@ -8,7 +8,7 @@
     z-index: 999;
 
     .logo_icon {
-        display: block;
+        display: flex;
         position: absolute;
         left: 14px;
         top: 16px;
@@ -16,6 +16,9 @@
         height: 20px;
         background-color: #eaeaea;
         text-decoration: none;
+        color: #fff;
+        align-items: center;
+        justify-content: center;
     }
 
     & > .iconfont {

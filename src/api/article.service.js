@@ -26,6 +26,10 @@ class ArticleService {
     getPrevById = (id) => {
         return GET(`/articles/prev/${id}`, null);
     }
+
+    getRelateArticles = () => {
+        return GET(`/articles/tag/a`, null);
+    }
 }
 
 export default new ArticleService();
