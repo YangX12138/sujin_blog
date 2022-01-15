@@ -10,7 +10,7 @@
     "classnames": "^2.2.6",
     "leancloud-storage": "^4.1.0",
     "lodash": "^4.17.15",
-    "marked": "^0.8.0",
+    "marked": "^4.0.10",
     "node-sass": "^4.13.0",
     "parallax-js": "^3.1.0",
     "react": "^16.12.0",
